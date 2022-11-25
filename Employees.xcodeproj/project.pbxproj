@@ -18,6 +18,7 @@
 		063E1D62293124F200E3AE6D /* MockURLSessionDownloadTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063E1D61293124F200E3AE6D /* MockURLSessionDownloadTask.swift */; };
 		063E1D642931252B00E3AE6D /* APIClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063E1D632931252B00E3AE6D /* APIClientTests.swift */; };
 		063E1D6629312D5900E3AE6D /* EmployeeListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063E1D6529312D5900E3AE6D /* EmployeeListPresenterTests.swift */; };
+		063E1D6829312F5D00E3AE6D /* ImageLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063E1D6729312F5D00E3AE6D /* ImageLoaderTests.swift */; };
 		06A2FB4729310C6D00265B50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A2FB4629310C6D00265B50 /* AppDelegate.swift */; };
 		06A2FB4929310C6D00265B50 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A2FB4829310C6D00265B50 /* SceneDelegate.swift */; };
 		06A2FB4E29310C6D00265B50 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06A2FB4C29310C6D00265B50 /* Main.storyboard */; };
@@ -51,6 +52,7 @@
 		063E1D61293124F200E3AE6D /* MockURLSessionDownloadTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSessionDownloadTask.swift; sourceTree = "<group>"; };
 		063E1D632931252B00E3AE6D /* APIClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientTests.swift; sourceTree = "<group>"; };
 		063E1D6529312D5900E3AE6D /* EmployeeListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListPresenterTests.swift; sourceTree = "<group>"; };
+		063E1D6729312F5D00E3AE6D /* ImageLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoaderTests.swift; sourceTree = "<group>"; };
 		06A2FB4329310C6D00265B50 /* Employees.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Employees.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06A2FB4629310C6D00265B50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		06A2FB4829310C6D00265B50 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 			children = (
 				063E1D6529312D5900E3AE6D /* EmployeeListPresenterTests.swift */,
 				063E1D632931252B00E3AE6D /* APIClientTests.swift */,
+				063E1D6729312F5D00E3AE6D /* ImageLoaderTests.swift */,
 				063E1D5B293124AC00E3AE6D /* Shared */,
 			);
 			path = EmployeesTests;
@@ -323,6 +326,7 @@
 			files = (
 				063E1D5E293124C200E3AE6D /* MockAPIClient.swift in Sources */,
 				063E1D60293124DC00E3AE6D /* MockURLSessionDataTask.swift in Sources */,
+				063E1D6829312F5D00E3AE6D /* ImageLoaderTests.swift in Sources */,
 				063E1D62293124F200E3AE6D /* MockURLSessionDownloadTask.swift in Sources */,
 				063E1D642931252B00E3AE6D /* APIClientTests.swift in Sources */,
 				063E1D6629312D5900E3AE6D /* EmployeeListPresenterTests.swift in Sources */,
