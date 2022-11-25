@@ -23,6 +23,7 @@
         - handling different states: loading, success, empty, error
         - download image asyncronously 
         - support cancellation of image download when cell is not visible
+        - supports in-disk caching of images
         
 
 
@@ -37,14 +38,15 @@
 
 ## Did you make any trade-offs for this project? What would you have done differently with more time?
     
-     - I can add employee detail screen where all details associated with employee can be shown with large image 
+    - I can split the ImageLoader class into different classes for storing cache and ongoing task
+    - I can add employee detail screen where all details associated with employee can be shown with large image 
 
 
 ## What do you think is the weakest part of your project?
 
     ### Needs improvement in Image Loader
 
-        -Can create a different classes for storing cache and ongoing task
+        - Can create a different classes for storing cache and ongoing task
 
 
 ## Did you copy any code or dependencies? Please make sure to attribute them here!
