@@ -34,7 +34,7 @@
 
 ## How long did you spend on this project?
 
-    - 3 hours  
+    - 4 hours (3 hours + 1 hour for tests)
 
 ## Did you make any trade-offs for this project? What would you have done differently with more time?
     
