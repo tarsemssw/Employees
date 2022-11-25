@@ -46,4 +46,22 @@ class ImageLoaderTests: XCTestCase {
         // Then
         XCTAssertEqual(receivedData, mockData)
     }
+    
+    func testDataLoadFromCache() throws {
+        // Given
+        let mockData = #imageLiteral(resourceName: "placeholder")
+        var receivedData: UIImage?
+        mockImageLoader.load(urlPath: "/16c00560-6dd3-4af4-97a6-d4754e7f2394/small.jpg") { _ in }
+        
+        // When
+        mockImageLoader.load(urlPath: "/16c00560-6dd3-4af4-97a6-d4754e7f2394/small.jpg") { data in
+            receivedData = data
+        }
+        let completion = mockImageLoader.loadCompletionHandler
+        completion?(mockData)
+        
+        // Then
+        XCTAssertEqual(mockImageLoader.loadCallCount, 2)
+        XCTAssertEqual(receivedData, mockData)
+    }
 }

@@ -17,6 +17,7 @@ final class ImageLoader: ImageLoading{
     // MARK: Properties
     
     private var apiClient: APIClient
+    private var fileIOManager = try? FileIOManager()
     private var ongoingTasks: [String : URLSessionDownloadTask] = [:]
     
     // MARK: Initializer
@@ -29,7 +30,7 @@ final class ImageLoader: ImageLoading{
     // MARK: Methods
     
     func load(urlPath: String, completionHandler: @escaping ((UIImage?) -> Void)){
-        downloadImage(urlPath: urlPath, completionHandler: completionHandler)
+        getImageFromCache(urlPath: urlPath, completionHandler: completionHandler)
     }
     
     func cancel(urlPath: String){
@@ -40,12 +41,21 @@ final class ImageLoader: ImageLoading{
     }
 }
 extension ImageLoader{
+    func getImageFromCache(urlPath:String, completionHandler: @escaping ((UIImage?) -> Void)){
+        let fileName = getFileNameFromUrl(url: urlPath)
+        if let file = try? fileIOManager?.read(documentName: fileName){
+            let image = UIImage(contentsOfFile: file.relativePath)
+            completionHandler(image)
+        }else{
+            downloadImage(urlPath: urlPath, completionHandler: completionHandler)
+        }
+    }
     func downloadImage(urlPath: String, completionHandler: @escaping ((UIImage?) -> Void)){
         let downloadTask = apiClient.downloadImageWithUrl(urlPath) {[weak self] result in
             self? .ongoingTasks.removeValue(forKey: urlPath)
             switch result{
             case .success(let tmpLocation):
-                self?.handleSuccess(location: tmpLocation, completionHandler: completionHandler)
+                self?.handleSuccess(fromUrl: tmpLocation, toUrl: urlPath, completionHandler: completionHandler)
             case .failure(_):
                 break
             }
@@ -54,12 +64,24 @@ extension ImageLoader{
         downloadTask?.resume()
     }
     
-    func handleSuccess(location: URL, completionHandler: @escaping ((UIImage?) -> Void)){
-        let image = UIImage(contentsOfFile: location.relativePath)
-        DispatchQueue.main.async {
-            completionHandler(image)
+    func handleSuccess(fromUrl: URL, toUrl: String, completionHandler: @escaping ((UIImage?) -> Void)){
+        // move the downloaded file from the temporary location url to your app documents directory
+        let fileName = getFileNameFromUrl(url: toUrl)
+        if let file = try? fileIOManager?.move(fromURL: fromUrl, documentName: fileName){
+            let image = UIImage(contentsOfFile: file.relativePath)
+            DispatchQueue.main.async {
+                completionHandler(image)
+            }
+        }else{
+            completionHandler(nil)
         }
+    }
+    func getFileNameFromUrl(url:String) -> String{
+        guard let pathComponents = URL(string: url)?.pathComponents else{return "default.jpg"}
+        if pathComponents.count > 2{
+            return "\(pathComponents[pathComponents.count-2])-\(pathComponents[pathComponents.count-1])"
+        }
+        return "default.jpg"
     }
     
 }
-
