@@ -5,10 +5,10 @@
 //  Created by Tarsem Singh on 25/11/22.
 //
 
-struct APIResponse: Decodable{
+struct APIResponse: Codable{
     var employees: [Employee]
 }
-struct Employee: Decodable{
+struct Employee: Codable{
     var uuid: String
     var full_name: String
     var phone_number: String?
