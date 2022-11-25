@@ -9,24 +9,17 @@
 /* Begin PBXBuildFile section */
 		06A2FB4729310C6D00265B50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A2FB4629310C6D00265B50 /* AppDelegate.swift */; };
 		06A2FB4929310C6D00265B50 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A2FB4829310C6D00265B50 /* SceneDelegate.swift */; };
-		06A2FB4B29310C6D00265B50 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A2FB4A29310C6D00265B50 /* ViewController.swift */; };
 		06A2FB4E29310C6D00265B50 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06A2FB4C29310C6D00265B50 /* Main.storyboard */; };
 		06A2FB5029310C6E00265B50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06A2FB4F29310C6E00265B50 /* Assets.xcassets */; };
 		06A2FB5329310C6E00265B50 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06A2FB5129310C6E00265B50 /* LaunchScreen.storyboard */; };
-		06A2FB5E29310C6F00265B50 /* EmployeesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A2FB5D29310C6F00265B50 /* EmployeesTests.swift */; };
-		06A2FB6829310C6F00265B50 /* EmployeesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A2FB6729310C6F00265B50 /* EmployeesUITests.swift */; };
-		06A2FB6A29310C6F00265B50 /* EmployeesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A2FB6929310C6F00265B50 /* EmployeesUITestsLaunchTests.swift */; };
+		06A2FB7D29310D6C00265B50 /* EmployeeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A2FB7C29310D6C00265B50 /* EmployeeListViewController.swift */; };
+		06A2FB7F29310E1000265B50 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A2FB7E29310E1000265B50 /* Employee.swift */; };
+		06A2FB8329310E9100265B50 /* EmployeeListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A2FB8229310E9100265B50 /* EmployeeListPresenter.swift */; };
+		06A2FB8529310F8E00265B50 /* EmployeeListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A2FB8429310F8E00265B50 /* EmployeeListCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		06A2FB5A29310C6F00265B50 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 06A2FB3B29310C6D00265B50 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 06A2FB4229310C6D00265B50;
-			remoteInfo = Employees;
-		};
-		06A2FB6429310C6F00265B50 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 06A2FB3B29310C6D00265B50 /* Project object */;
 			proxyType = 1;
@@ -39,16 +32,15 @@
 		06A2FB4329310C6D00265B50 /* Employees.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Employees.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06A2FB4629310C6D00265B50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		06A2FB4829310C6D00265B50 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		06A2FB4A29310C6D00265B50 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		06A2FB4D29310C6D00265B50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		06A2FB4F29310C6E00265B50 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		06A2FB5229310C6E00265B50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		06A2FB5429310C6E00265B50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		06A2FB5929310C6F00265B50 /* EmployeesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmployeesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		06A2FB5D29310C6F00265B50 /* EmployeesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesTests.swift; sourceTree = "<group>"; };
-		06A2FB6329310C6F00265B50 /* EmployeesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmployeesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		06A2FB6729310C6F00265B50 /* EmployeesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesUITests.swift; sourceTree = "<group>"; };
-		06A2FB6929310C6F00265B50 /* EmployeesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		06A2FB7C29310D6C00265B50 /* EmployeeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListViewController.swift; sourceTree = "<group>"; };
+		06A2FB7E29310E1000265B50 /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
+		06A2FB8229310E9100265B50 /* EmployeeListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListPresenter.swift; sourceTree = "<group>"; };
+		06A2FB8429310F8E00265B50 /* EmployeeListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,13 +58,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		06A2FB6029310C6F00265B50 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -81,7 +66,6 @@
 			children = (
 				06A2FB4529310C6D00265B50 /* Employees */,
 				06A2FB5C29310C6F00265B50 /* EmployeesTests */,
-				06A2FB6629310C6F00265B50 /* EmployeesUITests */,
 				06A2FB4429310C6D00265B50 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -91,7 +75,6 @@
 			children = (
 				06A2FB4329310C6D00265B50 /* Employees.app */,
 				06A2FB5929310C6F00265B50 /* EmployeesTests.xctest */,
-				06A2FB6329310C6F00265B50 /* EmployeesUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -99,9 +82,9 @@
 		06A2FB4529310C6D00265B50 /* Employees */ = {
 			isa = PBXGroup;
 			children = (
+				06A2FB7629310CEE00265B50 /* EmployeeList */,
 				06A2FB4629310C6D00265B50 /* AppDelegate.swift */,
 				06A2FB4829310C6D00265B50 /* SceneDelegate.swift */,
-				06A2FB4A29310C6D00265B50 /* ViewController.swift */,
 				06A2FB4C29310C6D00265B50 /* Main.storyboard */,
 				06A2FB4F29310C6E00265B50 /* Assets.xcassets */,
 				06A2FB5129310C6E00265B50 /* LaunchScreen.storyboard */,
@@ -113,18 +96,51 @@
 		06A2FB5C29310C6F00265B50 /* EmployeesTests */ = {
 			isa = PBXGroup;
 			children = (
-				06A2FB5D29310C6F00265B50 /* EmployeesTests.swift */,
 			);
 			path = EmployeesTests;
 			sourceTree = "<group>";
 		};
-		06A2FB6629310C6F00265B50 /* EmployeesUITests */ = {
+		06A2FB7629310CEE00265B50 /* EmployeeList */ = {
 			isa = PBXGroup;
 			children = (
-				06A2FB6729310C6F00265B50 /* EmployeesUITests.swift */,
-				06A2FB6929310C6F00265B50 /* EmployeesUITestsLaunchTests.swift */,
+				06A2FB7B29310D1200265B50 /* Model */,
+				06A2FB7A29310D0D00265B50 /* View */,
+				06A2FB7829310CFE00265B50 /* Presenter */,
+				06A2FB7729310CF700265B50 /* Coordinator */,
 			);
-			path = EmployeesUITests;
+			path = EmployeeList;
+			sourceTree = "<group>";
+		};
+		06A2FB7729310CF700265B50 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				06A2FB8429310F8E00265B50 /* EmployeeListCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		06A2FB7829310CFE00265B50 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				06A2FB8229310E9100265B50 /* EmployeeListPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		06A2FB7A29310D0D00265B50 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				06A2FB7C29310D6C00265B50 /* EmployeeListViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		06A2FB7B29310D1200265B50 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				06A2FB7E29310E1000265B50 /* Employee.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,24 +181,6 @@
 			productReference = 06A2FB5929310C6F00265B50 /* EmployeesTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		06A2FB6229310C6F00265B50 /* EmployeesUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 06A2FB7329310C6F00265B50 /* Build configuration list for PBXNativeTarget "EmployeesUITests" */;
-			buildPhases = (
-				06A2FB5F29310C6F00265B50 /* Sources */,
-				06A2FB6029310C6F00265B50 /* Frameworks */,
-				06A2FB6129310C6F00265B50 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				06A2FB6529310C6F00265B50 /* PBXTargetDependency */,
-			);
-			name = EmployeesUITests;
-			productName = EmployeesUITests;
-			productReference = 06A2FB6329310C6F00265B50 /* EmployeesUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -197,10 +195,6 @@
 						CreatedOnToolsVersion = 14.0.1;
 					};
 					06A2FB5829310C6F00265B50 = {
-						CreatedOnToolsVersion = 14.0.1;
-						TestTargetID = 06A2FB4229310C6D00265B50;
-					};
-					06A2FB6229310C6F00265B50 = {
 						CreatedOnToolsVersion = 14.0.1;
 						TestTargetID = 06A2FB4229310C6D00265B50;
 					};
@@ -221,7 +215,6 @@
 			targets = (
 				06A2FB4229310C6D00265B50 /* Employees */,
 				06A2FB5829310C6F00265B50 /* EmployeesTests */,
-				06A2FB6229310C6F00265B50 /* EmployeesUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -244,13 +237,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		06A2FB6129310C6F00265B50 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -258,9 +244,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				06A2FB4B29310C6D00265B50 /* ViewController.swift in Sources */,
 				06A2FB4729310C6D00265B50 /* AppDelegate.swift in Sources */,
+				06A2FB7F29310E1000265B50 /* Employee.swift in Sources */,
+				06A2FB8529310F8E00265B50 /* EmployeeListCoordinator.swift in Sources */,
 				06A2FB4929310C6D00265B50 /* SceneDelegate.swift in Sources */,
+				06A2FB8329310E9100265B50 /* EmployeeListPresenter.swift in Sources */,
+				06A2FB7D29310D6C00265B50 /* EmployeeListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,16 +257,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				06A2FB5E29310C6F00265B50 /* EmployeesTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		06A2FB5F29310C6F00265B50 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				06A2FB6A29310C6F00265B50 /* EmployeesUITestsLaunchTests.swift in Sources */,
-				06A2FB6829310C6F00265B50 /* EmployeesUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,11 +267,6 @@
 			isa = PBXTargetDependency;
 			target = 06A2FB4229310C6D00265B50 /* Employees */;
 			targetProxy = 06A2FB5A29310C6F00265B50 /* PBXContainerItemProxy */;
-		};
-		06A2FB6529310C6F00265B50 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 06A2FB4229310C6D00265B50 /* Employees */;
-			targetProxy = 06A2FB6429310C6F00265B50 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -522,40 +496,6 @@
 			};
 			name = Release;
 		};
-		06A2FB7429310C6F00265B50 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.EmployeesUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Employees;
-			};
-			name = Debug;
-		};
-		06A2FB7529310C6F00265B50 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.EmployeesUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Employees;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -582,15 +522,6 @@
 			buildConfigurations = (
 				06A2FB7129310C6F00265B50 /* Debug */,
 				06A2FB7229310C6F00265B50 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		06A2FB7329310C6F00265B50 /* Build configuration list for PBXNativeTarget "EmployeesUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				06A2FB7429310C6F00265B50 /* Debug */,
-				06A2FB7529310C6F00265B50 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
