@@ -11,7 +11,7 @@ protocol EmployeeListDisplaying: AnyObject {
     func showIndicator(_ shouldShow: Bool)
     func show(screenTitle: String)
     func showNoDataView(with message: String)
-    func show(list: [Employee])
+    func show(list: [EmployeeCellItem])
 }
 protocol APIClient {
     func fetchDecodedData<T: Decodable>(_ urlPath: String, queryItems: [URLQueryItem]?, _ completionHandler: @escaping (Result<T, APIError>) -> Void)
@@ -47,17 +47,20 @@ final class EmployeeListPresenter {
     private weak var display: EmployeeListDisplaying?
     private weak var coordinator: EmployeeListCoordinating?
     private var apiClient: APIClient!
+    private var imageLoader: ImageLoading
     
     
     // MARK: Initialisers
     
     init(display: EmployeeListDisplaying,
          coordinator: EmployeeListCoordinating,
-         apiClient: APIClient = APIClientImplementation()
+         apiClient: APIClient = APIClientImplementation(),
+         imageLoader: ImageLoading = ImageLoader()
     ){
         self.display = display
         self.coordinator = coordinator
         self.apiClient = apiClient
+        self.imageLoader = imageLoader
     }
     
     // MARK: Methods
@@ -88,7 +91,22 @@ final class EmployeeListPresenter {
             return
         }
         
-        self.display?.show(list: employeeList)
+        let employeeCellItems: [EmployeeCellItem] = employeeList.map(){ employee -> EmployeeCellItem in
+            let employeeCellItem = EmployeeCellItem(employee: employee)
+            employeeCellItem.loadImageNotifier = { urlPath, displayImage  in
+                self.imageLoader.load(urlPath: urlPath) { image in
+                    if let image = image{
+                        displayImage(image)
+                    }
+                }
+            }
+            employeeCellItem.cancelImageNotifier = { urlPath in
+                self.imageLoader.cancel(urlPath: urlPath)
+            }
+            return employeeCellItem
+        }
+        
+        self.display?.show(list: employeeCellItems)
     }
     
     private func handleError(_ error: APIError){
@@ -111,6 +129,9 @@ final class EmployeeListPresenter {
 extension EmployeeListPresenter: EmployeeListPresenting{
     func viewDidLoad() {
         display?.show(screenTitle: Constant.screenTitle)
+        fetchEmployeeList()
+    }
+    func refresh() {
         fetchEmployeeList()
     }
 }
